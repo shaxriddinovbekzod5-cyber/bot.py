@@ -1,0 +1,10 @@
+import telebot
+
+TOKEN = "8778048236:AAE142dyvdm84rDanAmcNLuaOy4b9MqzV8Q"
+bot = telebot.TeleBot(TOKEN)
+
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.send_message(message.chat.id, "Bot ishlayapti 🚀")
+
+bot.polling()
